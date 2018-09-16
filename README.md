@@ -5,6 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
+## Running the server locally
+`foreman start --env env.local`
+
 * Ruby version
 
 * System dependencies
