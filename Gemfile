@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "foreman", "~> 0.64.0"
 
 ruby "2.5.1"
+
+# Added at 2018-09-16 15:38:17 -0500 by mandible:
+gem "devise", "~> 4.5"
