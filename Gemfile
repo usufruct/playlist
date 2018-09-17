@@ -66,3 +66,9 @@ ruby "2.5.1"
 
 # Added at 2018-09-16 15:38:17 -0500 by mandible:
 gem "devise", "~> 4.5"
+
+# Added at 2018-09-16 17:15:21 -0500 by mandible:
+gem "annotate", "~> 2.7"
+
+# Added at 2018-09-16 17:26:29 -0500 by mandible:
+gem "factory_bot_rails", "~> 4.11"

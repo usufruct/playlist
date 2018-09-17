@@ -6,7 +6,9 @@ application up and running.
 Things you may want to cover:
 
 ## Running the server locally
-`foreman start --env env.local`
+`foreman start server`
+`foreman run console`
+`foreman run annotate`
 
 * Ruby version
 
@@ -15,6 +17,16 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+
+User (Devise gem)
+- has many Playlists
+
+Playlist
+- has one User (no joint owenership of playlists)
+- has many Songs
+
+Song
+- can belong to one playlist
 
 * Database initialization
 
