@@ -7,7 +7,7 @@
 
   <% @playlists.each do |playlist| %>
     <tr>
-      <td><%= playlist.name %></td>
+      <td><%= link_to playlist.name, playlist %></td>
     </tr>
   <% end %>
 </table>
