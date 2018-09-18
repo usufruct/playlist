@@ -2,4 +2,20 @@
 <p>
   <strong>Name:</strong>
   <%= @playlist.name %>
+
+  <strong>tracks</strong>
+
+  <table>
+  <tr>
+    <th>name</th>
+    <th>artist</th>
+  </tr>
+
+  <% @playlist.tracks.each do |track| %>
+    <tr>
+      <td><%= link_to track.name, track.url, target: '_blank', rel: 'nofollow' %></td>
+      <td><%= track.artist %></td>
+    </tr>
+  <% end %>
+</table>
 </p>

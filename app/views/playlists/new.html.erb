@@ -1,11 +1,27 @@
 <h1>I'm new</h1>
 
 
-<%= form_with scope: :playlist, url: playlists_path, local: true do |form| %>
+<%= form_for @playlist, url: playlists_path, local: true do |form| %>
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
   </p>
+
+  <%= form.fields_for :tracks do |tff| %>
+    <h3>track</h3>
+    <p>
+    <%= tff.label :name %><br>
+    <%= tff.text_field :name %>
+    </p>
+    <p>
+    <%= tff.label :artist %><br>
+    <%= tff.text_field :artist %>
+    </p>
+    <p>
+    <%= tff.label :url %><br>
+    <%= tff.text_field :url %>
+    </p>
+  <% end %>
 
   <p>
     <%= form.submit %>
