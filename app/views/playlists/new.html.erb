@@ -7,21 +7,29 @@
     <%= form.text_field :name %>
   </p>
 
-  <%= form.fields_for :tracks do |tff| %>
-    <h3>track</h3>
-    <p>
-    <%= tff.label :name %><br>
-    <%= tff.text_field :name %>
-    </p>
-    <p>
-    <%= tff.label :artist %><br>
-    <%= tff.text_field :artist %>
-    </p>
-    <p>
-    <%= tff.label :url %><br>
-    <%= tff.text_field :url %>
-    </p>
-  <% end %>
+  <div id="track-inputs">
+    <%= form.fields_for :tracks do |tff| %>
+      <fieldset class="track-item">
+        <h3>track</h3>
+        <p>
+        <strong><%= tff.label :name %>: <strong>
+        <%= tff.text_field :name %>
+        </p>
+        <p>
+        <strong><%= tff.label :artist %>: <strong>
+        <%= tff.text_field :artist %>
+        </p>
+        <p>
+        <strong><%= tff.label :url %>: <strong>
+        <%= tff.text_field :url %>
+        </p>
+      </fieldset>
+    <% end %>
+  </div>
+
+  <p>
+    <%= button_tag "add track", type: 'button', :onclick => "javascript:trackMaker('.track-item', 'track-inputs')"%>
+  <p>
 
   <p>
     <%= form.submit %>

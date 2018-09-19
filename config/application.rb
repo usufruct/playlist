@@ -17,3 +17,8 @@ module Player
     # the framework and any gems in your application.
   end
 end
+
+# from https://github.com/TannerRogalsky/sprockets-es6
+require "action_view/railtie"
+require "sprockets/railtie"
+require "sprockets/es6"
