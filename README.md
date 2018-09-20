@@ -1,39 +1,34 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+# A Few Notes on This app
 
 ## Running the server locally
-`foreman start server`
-`foreman run console`
-`foreman run annotate`
 
-* Ruby version
+Foreman is used to manage the environment. There isn't much environment to manage at this time, but foreman is easy enough to work with. See the `Procfile` for command details.
 
-* System dependencies
+`foreman run server` - runs the site at: http://localhost:4000/
+`foreman run console` - rails console
+`foreman run annotate` - annotates the models. see: https://github.com/ctran/annotate_models
 
-* Configuration
+## Deploying to Heroku
+`git push heroku master` - deploys master to heroku
+`heroku logs -t` - see what the server is doing
 
-* Database creation
+The app should be running at: https://protected-hollows-43986.herokuapp.com/
 
-User (Devise gem)
-- has many Playlists
+Application Notes:
 
-Playlist
-- has one User (no joint owenership of playlists)
-- has many Songs
+Three Models:
+User - generated using the Devise gem, and can have many playlists
+Playlist - belongs to a user, and can have many tracks
+Track - belongs to a Playlist
 
-Song
-- can belong to one playlist
+Database integrity (what there is of it, anyway) is managed using postgres foreign key constaints
 
-* Database initialization
+The UI is generated using standard rails templates.
 
-* How to run the test suite
+The 'add track' button uses a bit of JavaScript to extend the playlist form.
 
-* Services (job queues, cache servers, search engines, etc.)
+Basic styles courtesy of Materialize: https://materializecss.com/
 
-* Deployment instructions
+When a user adds a track, if they fail to fill out all the fields the track data is ignored. Not a great user experience :)
 
-* ...
+
