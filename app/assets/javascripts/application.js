@@ -14,4 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require materialize
 console.log('hi there')

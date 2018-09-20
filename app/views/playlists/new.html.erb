@@ -1,28 +1,28 @@
-<h1>I'm new</h1>
+<h3>Create a Playlist</h3>
 
 
 <%= form_for @playlist, url: playlists_path, local: true do |form| %>
-  <p>
-    <%= form.label :name %><br>
+  <div class="input-field">
+    <%= form.label :name, 'Playlist Name:' %>
     <%= form.text_field :name %>
-  </p>
+  </div>
 
   <div id="track-inputs">
     <%= form.fields_for :tracks do |tff| %>
       <fieldset class="track-item">
-        <h3>track</h3>
-        <p>
-        <strong><%= tff.label :name %>: <strong>
+        <legend>&nbsp;track&nbsp;</legend>
+        <div class="input-field">
         <%= tff.text_field :name %>
-        </p>
-        <p>
-        <strong><%= tff.label :artist %>: <strong>
+        <%= tff.label :name %>
+        </div>
+        <div class="input-field">
+        <%= tff.label :artist %>
         <%= tff.text_field :artist %>
-        </p>
-        <p>
-        <strong><%= tff.label :url %>: <strong>
+        </div>
+        <div class="input-field">
+        <%= tff.label :url %>
         <%= tff.text_field :url %>
-        </p>
+        </div>
       </fieldset>
     <% end %>
   </div>

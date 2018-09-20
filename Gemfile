@@ -75,3 +75,6 @@ gem "factory_bot_rails", "~> 4.11"
 
 # Added at 2018-09-18 16:03:23 -0500 by mandible:
 gem "sprockets-es6", "~> 0.9.2"
+
+# Added at 2018-09-19 18:18:03 -0500 by mandible:
+gem "materialize-sass", "~> 1.0"
