@@ -17,8 +17,11 @@ The app should be running at: https://protected-hollows-43986.herokuapp.com/
 Application Notes:
 
 Three Models:
+
 User - generated using the Devise gem, and can have many playlists
+
 Playlist - belongs to a user, and can have many tracks
+
 Track - belongs to a Playlist
 
 Database integrity (what there is of it, anyway) is managed using postgres foreign key constaints
