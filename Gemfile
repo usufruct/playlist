@@ -59,22 +59,16 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Added at 2018-09-16 14:48:53 -0500 by mandible:
 gem "foreman", "~> 0.64.0"
 
 ruby "2.5.1"
 
-# Added at 2018-09-16 15:38:17 -0500 by mandible:
 gem "devise", "~> 4.5"
 
-# Added at 2018-09-16 17:15:21 -0500 by mandible:
 gem "annotate", "~> 2.7"
 
-# Added at 2018-09-16 17:26:29 -0500 by mandible:
 gem "factory_bot_rails", "~> 4.11"
 
-# Added at 2018-09-18 16:03:23 -0500 by mandible:
 gem "sprockets-es6", "~> 0.9.2"
 
-# Added at 2018-09-19 18:18:03 -0500 by mandible:
 gem "materialize-sass", "~> 1.0"
